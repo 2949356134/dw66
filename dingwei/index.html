@@ -1,0 +1,49 @@
+<!DOCTYPE html5 PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<script src="js/loct.js"></script>
+		<script type='text/javascript' src='js/photo.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/html.js' charset='utf-8'></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=0021a202682123264fae5cf7a3c69b35"></script>
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/phto.css" type="text/css"/>
+		 <link rel="shortcut icon" href="#" />
+		<title>政联民救援提速系统</title>
+	</head>
+	<body>
+		<!-- <div style="height: 100px; background-color: red; width: 100%;"></div> -->
+		<div class="item_1">
+			<div style="width: 100%; text-align: center;">政联民救援提速系统</div>
+			<span>1.</span>
+			<input placeholder="请输入手机号码" id="tel" type="tel"/>
+		</div>
+		<div class="item_2">
+			<span class="content">
+				<span>2.</span>
+			        <div class="container" >
+						<span style="background-color: #999999; border-radius: 5px; box-shadow: 1px 1px 1px black; height: 30px;width: 120px; display: inline-block;text-align: center;line-height: 30px;">点击拍照</span>
+			            <input multiple="multiple" type="file" id='id-face' name='face'  accept="image/*"/>
+						<img style='width: 100px;height: 150px; display: block; display: none;' id='face-result' border="none"/>
+			        </div>
+			</span>
+		</div> 
+		<div class="item_4">
+			<p id="Address">3.未曾进行定位</p>
+			<p id="tis" style="color: red;"></p>
+			<div id="container"></div>
+		</div>
+<!-- 		<script type="text/javascript">
+					console.log("ceshiyyy");
+					initcontainer();
+		</script> -->
+		<div class="item_5">
+			<button id="send" onclick="subm()">发送定位</button>
+		</div>
+		<div id="mak" hidden="">
+			<img src="static/images/kk.gif" />
+		</div>
+	</body>
+</html>

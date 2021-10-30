@@ -1,0 +1,22 @@
+
+.img-area{
+    flex:1
+}
+.container{
+	width: 300px;
+	display: inline-block;
+}
+.container input{
+	display: inline-block;
+    opacity:0;
+    filter:alpha(opacity=0);
+    width: 120px;
+    height: 30px;
+	position: relative;
+	left: -120px;
+    z-index: 9;
+}
+.container p{
+    font-size: 0.9rem;
+    color:#999
+}
