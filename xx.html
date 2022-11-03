@@ -40,6 +40,14 @@
 			    video: true,
 			    audio: false
 			};
+			function getQueryString(name) {
+					 var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+					 var r = window.location.search.substr(1).match(reg);
+					 if (r != null) {
+					  return unescape(r[2]);
+					 }
+					 return null;
+			}
 			let videoPlaying = false;
 			let v = document.getElementById('v');
 			let promise = navigator.mediaDevices.getUserMedia(constraints);
@@ -62,9 +70,10 @@
 					
 					var formData = new FormData();
 					formData.append('image', data);
+					formData.append('classify', getQueryString("classify"));
 					 
 					$.ajax({
-					    url: 'http://www.luofc.top:8686/photo/save',
+					    url: 'http://localhost:8686/photo/save',
 						type: 'POST',
 						cache: false,
 						data: formData,
